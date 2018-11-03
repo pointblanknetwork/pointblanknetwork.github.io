@@ -38,7 +38,7 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  line-height: auto;
+  line-height: 1rem;
 }
 
 h4 {
@@ -201,6 +201,13 @@ hr {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.box {
+  background-color:rgba(0,0,0,0.1);
+  max-width: 800px;
+  text-align: left;
+  padding: 1rem;
+}
+
 .right {
   left: 50vw;
   right: 0vw;
@@ -226,6 +233,7 @@ hr {
 
 .left-2 {
   left: 1rem;
+  max-width:200px;
   right: 80%;
   text-align: right;
   height: auto;
@@ -239,6 +247,7 @@ hr {
 }
 
 .right-2 {
+  max-width:600px;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   left: 20%;
   right: 1rem;
