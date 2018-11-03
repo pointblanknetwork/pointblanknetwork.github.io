@@ -29,7 +29,6 @@ h1 {
   margin-bottom: 1rem;
   font-size: 3rem;
   line-height: 3rem;
-  font-family: neou-b;
 }
 
 h2 {
@@ -117,6 +116,10 @@ section {
   justify-content: center;
 }
 
+#intro {
+  height: 80vh;
+}
+
 article {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -125,12 +128,16 @@ article {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  height: 80vh;
+}
+
+.bold {
+  font-family: neou-b;
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0);
   height: auto;
+  z-index: 1;
   width: 100vw;
   position: absolute;
   bottom: 0;
@@ -153,8 +160,20 @@ footer a h4 {
 }
 
 .x-axis:hover {
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0 5px rgba(0, 0, 0, 0.1);
   transform: translatex(2px);
+}
+.x-axis-rev {
+  line-height: auto;
+  text-decoration: none;
+  color: unset;
+  transition: transform 100ms, text-shadow 100ms ease;
+  text-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.x-axis-rev:hover {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transform: translatex(-2px);
 }
 
 .left {
@@ -186,9 +205,18 @@ footer a h4 {
   overflow: hidden;
 }
 
+.centered {
+  max-width: 800px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  margin: auto 0px;
+}
+
 .left-2 {
   left: 1rem;
-  right: 80vw;
+  right: 80%;
   text-align: right;
   height: auto;
   width: auto;
@@ -197,12 +225,12 @@ footer a h4 {
   flex-flow: column;
   position: absolute;
   justify-content: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .right-2 {
-  left: 20vw;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  left: 20%;
   right: 1rem;
   text-align: left;
   padding-left: 1rem;
@@ -221,13 +249,11 @@ footer a h4 {
 
 #view {
   height: 0vh;
-  transition:height 1000ms ease;
 }
 
 .view {
   width: 100%;
   display: block;
-
   position: relative;
   border-radius: 16px;
   overflow: hidden;

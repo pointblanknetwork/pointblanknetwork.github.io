@@ -9,41 +9,53 @@
   <link rel="stylesheet" href="style.css">
   <script>
     function expand() {
-      document.getElementById('view').style.cssText = 'height:100vh;';
+      document.getElementById('view').style.cssText = 'height:80vh;';
+      document.getElementById('intro').style.cssText = 'height:0vh;';
+      document.getElementById('intro').style.cssText = 'display:none;';
     }
 
     function contract() {
       document.getElementById('view').style.cssText = 'height:0vh;';
+      document.getElementById('intro').style.cssText = 'height:80vh;';
+      document.getElementById('intro').style.cssText = 'display:flex;';
+
+
     }
   </script>
 </head>
 
 <body>
   <header>
-    <a href="about.html" onmousedown="expand()" target="view"><h3>about</h3></a>
-    <a href="strategy.html" onmousedown="expand()" target="view"><h3>strategy</h3></a>
-    <a href="inquiry.html" onmousedown="expand()" target="view" href=""><h3>inquire</h3></a>
+    <a href="hardware.html" onmousedown="expand() " target="view"><h3>HARDWARE</h3></a>
+    <a href="software.html" onmousedown="expand()" target="view"><h3>SOFTWARE</h3></a>
+    <a href="inquire.html" onmousedown="contract()" target="view"><h3>HOME</h3></a>
   </header>
   <section>
-    <article>
-      <div class="left-2">
-        <h1 class="tables" style="margin:0;">h <br>j</h1> </div>
+    <article id="intro">
+      <div class="centered">
+        <div class="left-2">
+          <h1 class="tables" style="margin:0.75rem;">h<br>j</h1>
+        </div>
 
-      <div class="right-2">
-        <p>We are a team of machine elves manifesting our future</p>
+        <div class="right-2">
+          <h3 class="bold">This timline is protected</h3>
+          <p>We are a team of ADHD driven machine elves <br> manifesting a better future.</p>
+        </div>
       </div>
     </article>
-    <div class="view" id="view"><iframe style="width:100%;left:0;height:100vh;" src="about.html" name="view" frameborder="0"></iframe></div>
+    <div class="view" id="view"><iframe style="width:100%;left:0;height:80vh;" src="about.html" name="view" frameborder="0"></iframe></div>
   </section>
   <footer>
     <div class="left">
-      <a class="x-axis" href=""><h4>Social</h4></a>
-      <a class="x-axis" href=""><h4>Github</h4></a>
-      <a class="x-axis" href=""><h4>Archive</h4></a>
+      <a class="x-axis" href="" target="_blank"><h4>Social</h4></a>
+      <a class="x-axis" href="" target="_blank"><h4>Github</h4></a>
+      <a class="x-axis" href="404.html" target=""><h4>Archive</h4></a>
+      <a class="x-axis" target="_blank" href="view-source:index.html">
+        <h4>source</h4></a>
     </div>
     <div class="right light">
-      <a target="_blank" href="view-source:index.html">
-        <h3>open source</h3></a>
+      <a class="x-axis-rev" href="mailto:pointblank.network@gmail.com" target="">
+        <h2 style="line-height:1rem;">CONTACT</h2></a>
     </div>
   </footer>
 </body>
