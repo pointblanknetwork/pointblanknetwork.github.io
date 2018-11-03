@@ -1,0 +1,240 @@
+@font-face {
+  font-family: qube;
+  src: url('Qube.ttf');
+}
+
+@font-face {
+  font-family: neou-b;
+  src: url('Neou-Bold.ttf');
+}
+
+@font-face {
+  font-family: neou-t;
+  src: url('Neou-Thin.ttf');
+}
+
+@font-face {
+  font-family: tables;
+  src: url('tables.ttf');
+}
+
+a, h1, h2, h3, h4, p {
+  letter-spacing: 1px;
+  font-family: neou-t;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: neou-b;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: auto;
+}
+
+h4 {
+  letter-spacing: 0.25rem;
+  font-size: 0.75rem;
+  line-height: auto;
+}
+
+a {
+  line-height: auto;
+  text-decoration: none;
+  color: unset;
+  transition: transform 100ms, text-shadow 100ms ease;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+  transform: translateY(1px);
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+a:active {
+  transform: translateY(2px);
+  opacity: 0.8;
+}
+
+body {
+  background-color: #eeeeee;
+  height: 100vh;
+  width: auto;
+  position: absolute;
+  display: block;
+  z-index: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0);
+  height: 2rem;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
+
+header a {
+  font-size: 1rem;
+  line-height: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+header a h3 {
+  opacity: 0.3;
+  font-family: neou-b;
+  transition: opacity 500ms ease;
+}
+
+header:hover a h3 {
+  opacity: 0.5;
+}
+
+section {
+  overflow-x: hidden;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: auto;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0);
+  height: auto;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
+
+footer a h4 {
+  margin: 0;
+}
+
+.x-axis {
+  line-height: auto;
+  text-decoration: none;
+  color: unset;
+  transition: transform 100ms, text-shadow 100ms ease;
+  text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.x-axis:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translatex(2px);
+}
+
+.left {
+  left: 0vw;
+  right: 50vw;
+  text-align: right;
+  height: auto;
+  width: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.right {
+  left: 50vw;
+  right: 0vw;
+  text-align: left;
+  padding-left: 1rem;
+  height: auto;
+  width: auto;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.left-2 {
+  left: 1rem;
+  right: 80vw;
+  text-align: right;
+  height: auto;
+  width: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.right-2 {
+  left: 20vw;
+  right: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+  height: auto;
+  width: auto;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.light {
+  opacity: 0.5;
+}
+
+#view {
+  height: 0vh;
+  transition:height 1000ms ease;
+}
+
+.view {
+  width: 100%;
+  display: block;
+
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.tables {
+  font-family: tables;
+}
+
+#display

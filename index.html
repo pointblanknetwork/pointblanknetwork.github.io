@@ -1,144 +1,51 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-  <title>network</title>
-  <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles.css">
-  <style media="screen">
-    .gold-a {
-      height: 100vh;
-    }
-
-    @media screen and (max-width:100vh) {
-      .gold-a {
-        height: 10vh;
-      }
-    }
-  </style>
-
-  <script type="text/javascript">
-    (function() {
-      var html = document.getElementsByTagName('html')[0];
-      html.className += ' is-loading';
-
-      window.onload = function() {
-        html.className = String(html.className).replace('is-loading', '');
-      }
-    }());
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Server</title>
+  <link rel="stylesheet" href="style.css">
   <script>
-    function hovon(soundobj) {
-      var thissound = document.getElementById(soundobj);
-      thissound.play();
+    function expand() {
+      document.getElementById('view').style.cssText = 'height:100vh;';
     }
 
-    function hovoff(soundobj) {
-      var thissound = document.getElementById(soundobj);
-      thissound.pause();
-      thissound.currentTime = 0;
+    function contract() {
+      document.getElementById('view').style.cssText = 'height:0vh;';
     }
   </script>
 </head>
 
-<body> <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+<body>
+  <header>
+    <a href="about.html" onmousedown="expand()" target="view"><h3>about</h3></a>
+    <a href="strategy.html" onmousedown="expand()" target="view"><h3>strategy</h3></a>
+    <a href="inquiry.html" onmousedown="expand()" target="view" href=""><h3>inquire</h3></a>
+  </header>
+  <section>
+    <article>
+      <div class="left-2">
+        <h1 class="tables" style="margin:0;">h <br>j</h1> </div>
 
-  <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-  <div id="mask">
-    <div id="container">
-      <section class="total" id="z2">
-        <center><img id="topimg-spin" class="spinner" alt="" src="pic/pbdata.png"></center>
-
-        <center id="himgcont">
-
-          <img id="arrow" alt="Scroll Down" src="down.png" class="" style=""></center>
-
-      </section>
-      <section class="total" id="z1">
-
-        <div class="gold-b" style="top: 0;">
-          <div class="semi" style="overflow:hidden;top:0 !important;">
-            <iframe  src="" name="site" id="site-frame" frameborder="0"></iframe>
-
-            <canvas id="dotty" width="800" height="800" style="mix-blend-mode:overlay;"></canvas>
-
-          </div>
-        </div>
-        <div class="gold-a">
-          <div class="menu">
-            <ul id="menu" class="mobi-s">
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://www.pointblank.company/live.html">
-                  <p>LIVE</p>
-                </a>
-              </li>
-
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="info.html">
-                  <p>INFO</p>
-                </a>
-              </li>
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="arts.html">
-                  <p>ARTS</p>
-                </a>
-              </li>
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="soci.html">
-                  <p>SOCI</p>
-                </a>
-              </li>
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="cctv.html">
-                  <p>CCTV</p>
-                </a>
-              </li>
-
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="jive.html">
-                  <p>JIVE</p>
-                </a>
-              </li>
-
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://www.pointblank.company">
-                  <p>COMP</p>
-                </a>
-              </li>
-              <li>
-                <a target="site" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="placeholder.html">
-                  <p>HOME</p>
-                </a>
-              </li>
-
-
-
-            </ul>
-          </div>
-        </div>
-
-      </section>
+      <div class="right-2">
+        <p>We are a team of machine elves manifesting our future</p>
+      </div>
+    </article>
+    <div class="view" id="view"><iframe style="width:100%;left:0;height:100vh;" src="about.html" name="view" frameborder="0"></iframe></div>
+  </section>
+  <footer>
+    <div class="left">
+      <a class="x-axis" href=""><h4>Social</h4></a>
+      <a class="x-axis" href=""><h4>Github</h4></a>
+      <a class="x-axis" href=""><h4>Archive</h4></a>
     </div>
-  </div>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/client.js"></script>
-  <script src="network.js"></script>
-
-  <script>
-    leScroll.addEvent('.arrowdown', 1);
-    leScroll.addEvent('#clickme', 0);
-    leScroll.addEvent('.next', 3);
-    leScroll.addEvent('.arrowup', 0);
-  </script>
+    <div class="right light">
+      <a target="_blank" href="view-source:index.html">
+        <h3>open source</h3></a>
+    </div>
+  </footer>
 </body>
 
 </html>
