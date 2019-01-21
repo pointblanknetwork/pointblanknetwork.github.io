@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>static</title>
+  <script src="network.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+
+    }
+
+    #dotty {
+      opacity: 1;
+      filter: brightness(1.2)sepia(0);
+      z-index: 1;
+      position: absolute;
+      transition: filter 100ms ease;
+    }
+
+    #dotty:hover {
+      filter: brightness(1.8)sepia(0);
+    }
+
+    .static {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background-size: cover;
+      box-shadow: inset 0px 0px 256px rgba(0, 100, 255, 0.1), 0px 0px 0px 16px #eeeeee;
+      background-blend-mode: overlay;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="static"><canvas id="dotty" width="800" height="800" style=""></canvas></div>
+
+</body>
+
+</html>

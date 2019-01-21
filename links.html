@@ -1,0 +1,324 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+
+  <title>links</title>
+
+
+  <script>
+    function scrollToBottom(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = div.scrollHeight - div.clientHeight;
+    }
+
+    function scrollToTop(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = 0;
+    }
+
+    //Require jQuery
+    function scrollSmoothToBottom(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: div.scrollHeight - div.clientHeight
+      }, 500);
+    }
+
+    //Require jQuery
+    function scrollSmoothToTop(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: 0
+      }, 500);
+    }
+  </script>
+  <script>
+      function hovon(soundobj) {
+        var thissound = document.getElementById(soundobj);
+        thissound.play();
+      }
+
+      function hovoff(soundobj) {
+        var thissound = document.getElementById(soundobj);
+        thissound.pause();
+        thissound.currentTime = 0;
+      }
+    </script>
+  <script>
+    function disp() {
+      setTimeout(function() {
+        scrollSmoothToBottom('linkreel')
+        document.getElementById('metricview').style.cssText = 'height:100vh;';
+        document.getElementById('dispres3').style.cssText = 'display:block;';
+      }, 100);
+
+    }
+  </script>
+
+  <script>
+    function info1() {
+      document.getElementById('info3').style.cssText = 'opacity:1;';
+    }
+      function info0() {
+        document.getElementById('info3').style.cssText = 'opacity:0;';
+      }
+  </script>
+
+  <script>
+    function res() {
+      setTimeout(function() {
+        scrollSmoothToTop('linkreel')
+        document.getElementById('metricview').style.cssText = 'height:0vh;';
+        document.getElementById('dispres3').style.cssText = 'display:none;';
+      }, 100);
+
+    }
+  </script>
+</head>
+
+<body>
+  <audio id="whirc" preload="auto" src="snd/s3.mp3"></audio>
+  <audio id="whirg" preload="auto" src="snd/sel.mp3"></audio>
+
+  <div class="scroll-default" style="" id="linkreel">
+    <div class="linkbox" style="margin:20% auto;">
+      <h1 class="l-title">COLLECTION OF DISRUPTIVE INFORMATION</h1>
+      <hr class="full-hr">
+      <span class="linklist"> 
+        
+        <h4>Here you will find an array of <i>data</i> I've gathered on pivitol research, cutting edge technology and discovery in the academic world, and a plethora of datasets covering active flights to consciousness and space weather.</h4>
+        
+        <h3>Take your time, its all you have.</h3a>
+      </span>
+    </div>
+    
+    
+    
+    
+      <div class="linkbox" style="margin:auto;">
+      <h2 class="l-title">Peer-Reviewed <b class="hl">Research</b></h2>
+      <hr class="full-hr">
+      <span class="linklist"> <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://media.lasvegasnow.com/nxsglobal/lasvegasnow/document_dev/2018/05/04/Warp_Drive_Dark_Energy_1525479960070_41686974_ver1.0.pdf">
+          <h4>Manipulation of Extra Dimensions<b class="hl"> PRIME DATA</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20040171929.pdf">
+          <h4>Asymmetrical Capacitors for Propulsion</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://web.archive.org/web/20181206234419/http://electricspacecraft.org/uploads/3/4/6/7/3467372/breakthrough_propulsion.pdf">
+          <h4>Relativistic Propulsion<b class="hl"> PRIME DATA</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.researchgate.net/profile/Michael_Persinger/publication/279743543_Magnetic_Fields_Generated_by_Optical_Coupler_Circuits_May_Also_Be_Containment_Loci_for_Entanglement_of_P-N_Junction-Plasma_Cell_Membrane_Photons_within_Exposed_Living_Systems/links/5702e64a08ae646a9da87c01.pdf">
+          <h4>Entanglement of Photons within Living Systems</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://media.lasvegasnow.com/nxsglobal/lasvegasnow/document_dev/2018/05/04/Advanced_Space_Propulsion_1525479713208_41686961_ver1.0.pdf">
+          <h4>Propulsion Based on Vacuum Engineering</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://media.lasvegasnow.com/nxsglobal/lasvegasnow/document_dev/2018/05/18/TIC%20TAC%20UFO%20EXECUTIVE%20REPORT_1526682843046_42960218_ver1.0.pdf">
+          <h4>AAV Executive Report<b class="hl"> PRIME DATA</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.researchgate.net/profile/Takaaki_Musha2/publication/270161497_Quantum_Vacuum_Energy_Gravity_Manipulation_and_the_Force_Generated_by_the_Interaction_between_High-Potential_Electric_Fields_and_Zero-Point-Field/links/5594acb108ae99aa62c5a551/Quantum-Vacuum-Energy-Gravity-Manipulation-and-the-Force-Generated-by-the-Interaction-between-High-Potential-Electric-Fields-and-Zero-Point-Field.pdf">
+          <h4>Photonic Coherence in Microtubules</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.measurement.sk/2005/S2/Lipkova.pdf">
+          <h4>Human electromagnetic emission in the ELF band</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://file.scirp.org/pdf/OJBIPHY_2015072814564164.pdf">
+          <h4>Schumann Values in Microtubules</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1012.3371.pdf">
+          <h4>Emission of Mitochondrial Biophotons</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://vixra.org/pdf/1412.0115v1.pdf">
+          <h4>Prespacetime-Premomentumenergy</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/physics/papers/0207/0207027.pdf">
+          <h4>Unified Theory of Bivacuum</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1703.00548.pdf">
+          <h4>Evolving Deep Neural Networks</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1805.02665.pdf">
+          <h4>Conformal Quasicrystals and Holography</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1805.07896.pdf">
+          <h4>Dark Energy from Ratio Gravity</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/arxiv/papers/1204/1204.1952.pdf">
+          <h4>Quantum Ground States as Equilibrium</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/arxiv/papers/1204/1204.2184.pdf">
+          <h4>(Spacetime Metric) Engineering<b class="hl"> PRIME DATA</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1805.04431.pdf">
+          <h4>Challenging local realism via choice</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1512.00554.pdf">
+          <h4>CCC and the Fermi paradox</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1511.03076.pdf">
+          <h4>Chaotic Cyclic Cosmology</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1709.09203.pdf">
+          <h4>Nontensorial Gravitational Waves</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1802.10448.pdf">
+          <h4>Modeling the Collective Participant</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/arxiv/papers/1802/1802.02523.pdf">
+          <h4>Plasma Brain Dynamics</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/arxiv/papers/1804/1804.02759.pdf">
+          <h4>Queries in Intelligent Systems</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1802.02216.pdf">
+          <h4>Entanglement in Visual Perception</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1801.05707.pdf">
+          <h4>A possible extension of belief function</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1711.04801.pdf">
+          <h4>Quantum information in quantum cognition</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/ftp/arxiv/papers/1505/1505.00774.pdf">
+          <h4>Brain as n-qudit Quantum Hopfield Network</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://arxiv.org/pdf/1006.4908.pdf">
+          <h4>Gravity and the Standard Model in E8</h4>
+        </a>
+      </span>
+    </div>
+    <div class="linkbox" style="margin:auto;">
+      <h2 class="l-title">Benefactor <b class="hl">Organizations</b></h2>
+      <hr class="full-hr">
+      <span class="linklist">
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://earthtech.org/">
+          <h4>Earthtech International</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://quantumconsciousness.org/">
+          <h4>Stuart Hameroff ORCH OR</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://coi.tothestarsacademy.com/">
+          <h4>To The Stars Academy</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.thegrandintegrator.com/">
+          <h4>The Grand Integrator</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.quantumgravityresearch.org/">
+          <h4>Quantum Gravity Research</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.quantumbrain.org/">
+          <h4>Huping Hu's Quantum Brain</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://emmind.net/">
+          <h4>Electromagnetic Mind<b class="hl"> AGGREGATE</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.sns.ias.edu/arkani">
+          <h4>Nima Arkani-Hamed Homepage</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://fas.org/irp/agency/dod/jason/">
+          <h4>JASON Defense Technical Reports<b class="hl"> AGGREGATE</b></h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.excesscorrelation.com/">
+          <h4>NRG Excess Corolation Device</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://about.me/drmichaelpersinger">
+          <h4>Dr. Michael Persinger</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://stardrive.org/stardrive/">
+          <h4>Jack Sarfatti Stardriveb class="hl"&gt; AGGREGATE</h4>
+        </a>
+        
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://penroseinstitute.com/">
+          <h4>Roger Penrose Institute</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://christofkoch.com/">
+          <h4>Christof Koch’s Home Page</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://bigelowaerospace.com/">
+          <h4>bigelow aerospace</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://bigelowaerospace.com/">
+          <h4>Displacement Field Technologies Inc.</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://cannae.com/">
+          <h4>Cannae Technologies Inc</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://emdrive.com/">
+          <h4>Satellite Propulsion Research</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://www.seedvault.no/">
+          <h4>Svalbard Global Seed Vault</h4>
+        </a>
+      </span>
+    </div>
+    <div class="linkbox" style="margin:auto;">
+      <h2 class="l-title">Live Environmental <b class="hl">Metrics</b></h2>
+      <hr class="full-hr">
+      <span class="linklist">
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://nifc.maps.arcgis.com/apps/webappviewer/index.html?id=fa067b6b21534df283a87acc3ae3227c">
+          <h4>Wildfires</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://earthquake.usgs.gov/earthquakes/map/">
+          <h4>Earthquakes</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://earth.nullschool.net/">
+          <h4>Atmosphere</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="http://jsoc.stanford.edu/data/hmi/images/latest/">
+          <h4>Solar Magnetogram</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.swpc.noaa.gov/communities/radio-communications">
+          <h4>Space Weather | Radio</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://geomag.usgs.gov/plots/index.php">
+          <h4>Geomagnetic</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.census.gov/popclock/world#world-map">
+          <h4>Population</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://www.marketwatch.com/investing/stock/live/charts">
+          <h4>Financial</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://web.archive.org/web/20180713035101if_/http://aviation.globalincidentmap.com/">
+          <h4>Aviation</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://nocc.heartmath.org/spectrogram/index.php">
+          <h4>Schumann Archive</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://nocc.heartmath.org/power_levels/public/charts/power_levels.html">
+          <h4>Schumann Resonance</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://web.archive.org/web/20180713035104if_/http://gcpdot.com/gcpchart.php">
+          <h4>Consciousness</h4>
+        </a>
+        <a class="p-link" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown=" hovon('whirg')" onmouseup="disp()" target="data-frame" href="https://cybermap.kaspersky.com/">
+          <h4>Hacking</h4>
+        </a>
+      </span>
+    </div>
+
+
+    <div id="metricview">
+      <div id="dispres3">
+        <p id="info3">return to links</p>
+        <svg onmousedown="res(), hovon('whirg')" style="" class="bottom-res-3" onmouseover="info1(), hovon('whirc')" onmouseout="info0(), hovoff('whirc')" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+          <path style="fill:black;transform:translatey(-2px);" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+          <path style="fill:aliceblue;transform:translatey(0px);z-index:-1;position:absolute;" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+        </svg>
+      </div>
+
+      <iframe src="" name="data-frame" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+
+
+
+
+
+</div></body></html>

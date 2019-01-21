@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Pointblank Company</title>
+  <link rel="stylesheet" href="styled.css">
+
+  <script>
+    function drop() {
+      setTimeout(function() {
+        document.getElementById("maindisp").style.cssText = 'bottom:0vh;';
+        document.getElementById("container").style.cssText = 'bottom:-100vh;';
+      }, 100);
+
+    }
+  </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <iframe id="maindisp" src="index2.html" name="view" frameborder="0"></iframe>
+
+  <div id="container">
+
+    <div class="mainblock">
+      <h1 style="display:inline;" class="tlbr2">POINTBLANK</h1><svg onmousedown="drop()" class="arrow" style="" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+        <path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+      </svg>
+      <hr>
+      <h2 class="stretch">incentivising compassion</h2>
+      <div class="rotator" style="">
+
+      </div>
+      <div class="cont">
+        <div class="left slideleft">
+          <ul>
+            <li><a target="view" onmousedown="drop()" href="housing.html">
+                <p>Next Gen Housing</p>
+              </a></li>
+            <li><a target="view" onmousedown="drop()" href="soon.html">
+                <p>Vote Via Tax</p>
+              </a></li>
+            <li><a target="view" onmousedown="drop()" href="soon.html">
+                <p>Cortex Stimulation</p>
+              </a></li>
+            <li><a target="view" onmousedown="drop()" href="soon.html">
+                <p>Modular Energy</p>
+              </a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <h2 class="ttb">OPEN SOURCE</h2>
+          <h4 class="ttb2">PRIVACY RESPECTED \ forever</h4>
+        </div>
+      </div>
+      <div class="outlinks lbtr" style="">
+        <a href="https://github.com/pointblankcompany" target="_blank"><img src="icons/github.png" alt="github" class="icon"></a>
+        <a href="https://www.facebook.com/Point-Blank-137552596926938/" target="_blank"><img src="icons/facebook.png" alt="facebook" class="icon"></a>
+        <a href="https://www.instagram.com/pointblank_company/" target="_blank"><img src="icons/instagram.png" alt="instagram" class="icon"></a>
+        <a href="https://www.youtube.com/channel/UCpqtp8QwkEsbfjROIBh7ysg" target="_blank"><img src="icons/youtube.png" alt="youtube" class="icon"></a>
+        <a href="https://soundcloud.com/crystalline-aether" target="_blank"><img src="icons/soundcloud.png" alt="soundcloud" class="icon"></a>
+      </div>
+      <div class="blob r  lbtr2">
+        <h3>TRUST BUILT ON TRUTH</h3>
+        <hr>
+        <p>Doing business on digital platforms is great for everyone, lets match that on the backend.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <canvas id="dotty" width="549" height="757" style=""></canvas>
+
+  <script src="network.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[tech 04-PB]</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+  <audio id="whirb" preload="auto" src="snd/hov.mp3"></audio>
+  <audio id="whird" preload="auto" src="snd/page.mp3"></audio>
+  <audio id="whira" preload="auto" src="snd/menu.mp3"></audio>
+  <div id="mask" class="dot-sh">
+    <div id="container" >
+
+      <section id="a" class="mixy">
+        <div class="centered" style="z-index:1;">
+          <h1>Excess Correlation Experiment</h1>
+          <hr id="hrl">
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="http://excesscorrelation.com/"><h3>ORIGIN DOCUMENTATION</h3></a>
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://store.arduino.cc/genuino-uno-rev3"><h3>ACREW HARDWARE</h3></a>
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://github.com/pointblankcompany/Excess-Correlation-Toggle"><h3>DOWNLOAD ASSETS</h3></a>
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://github.com/pointblankcompany/Excess-Correlation-Toggle/blob/master/Schematic.png"><h3>VIEW SCHEMATIC</h3></a>
+            <a style="text-align:center;" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')"  target="_blank" href="https://raw.githubusercontent.com/pointblankcompany/Excess-Correlation-Toggle/master/Schematic.png"><img id="excess-img" src="sch.png" alt=""></a>
+        </div>
+        <canvas id="dotty" width="800" height="800" style="z-index:0;"></canvas>
+      </section>
+
+      <section id="b" class="mixy">
+        <div class="centered" style="z-index:1;">
+          <h1>External DB</h1>
+          <hr id="hrl">
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://www.anthropic.tech"><h3>Anthropic Technology</h3></a>
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://www.instructables.com/member/Myers%20Technology/"><h3>INSTRUCTABLES</h3></a>
+          <a target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://github.com/pointblankcompany"><h3>GITHUB</h3></a>
+
+        </div>
+        <li class="to-top" data-section="0"><a href="#a"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48"><path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path></svg></a></li>
+        <canvas id="dotty" width="800" height="800" style="z-index:0;"></canvas>
+      </section>
+      <canvas id="dotty" width="800" height="800" style="z-index:0;"></canvas>
+    </div>
+  </div>
+  <script src="network.js"></script>
+  <script src="line.js"></script>
+  <script src="onsound.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/client.js"></script>
+
+  <script>
+    leScroll.addEvent('.arrowdown', 1);
+    leScroll.addEvent('#clickme', 0);
+    leScroll.addEvent('.next', 3);
+    leScroll.addEvent('.arrowup', 0);
+  </script>
+</body>
+
+</html>

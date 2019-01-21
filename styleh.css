@@ -1,0 +1,100 @@
+@font-face {
+  font-family: neou;
+  src: url('Neou-Thin.ttf');
+}
+
+@font-face {
+  font-family: potra;
+  src: url('Potra.ttf');
+}
+
+body {
+  position: fixed;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+p {
+  font-family: neou;
+  color: white;
+  opacity: 0.9;
+}
+
+h1,
+h2 {
+  font-family: potra;
+  opacity: 0.9;
+  color: white;
+}
+
+.backing {
+  background-image: url(brutal.jpg);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  filter: blur(3px);
+  background-size: cover;
+  transform: scale(1.1);
+  background-position: center;
+  transition: filter 5s, transform 3s ease-in-out;
+  transition-delay: 5s;
+}
+
+canvas {
+  position: fixed;
+  touch-action: none;
+}
+
+.center {
+  background-image: url(brutal.jpg);
+  filter: brightness(1);
+  width: 300px;
+  height: 300px;
+  transform: scale(1);
+  z-index: 10;
+  background-position: center;
+  mix-blend-mode: normal;
+  background-size: ;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  border-radius: 250px;
+  transition: filter 1.5s, background-color 1s, width 100ms, height 100ms, transform 1s, border-radius 100ms ease;
+  transition-delay: 1s;
+  overflow: hidden;
+}
+.center h1{text-align:center;}
+.center:hover h1{text-align:left;padding-left:5%;}
+
+#stuff {padding-left:5%;
+  max-width: 80%;
+
+  height:auto;
+  display: none;
+}
+
+.center:hover {
+  transform: scale(1);
+  filter: saturate(0)brightness(0.9);
+  border-radius: 0px;
+  width: 100vw;
+  height: 100%;  justify-content: center;
+
+  transition-delay: 0ms;
+}
+
+.center:hover #stuff {   transition-delay: 3s;display: block;
+
+position:relative;width:400px;
+}

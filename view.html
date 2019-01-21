@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[view 01-PB]</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+  <audio id="whirb" preload="auto" src="snd/hov.mp3"></audio>
+  <audio id="whird" preload="auto" src="snd/page.mp3"></audio>
+  <audio id="whira" preload="auto" src="snd/menu.mp3"></audio>
+
+  <label for="navmenu"><span class="icon-menu"><div onmouseout="hovoff('whird')" onmouseover="hovon('whird')" id="menu-button"></div></span></label>
+  <input type="checkbox" id="navmenu">
+  <nav>
+    <ul>
+      <li><a onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="data.html"><h1>DATA</h1></a></li>
+      <li><a onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="live.html"><h1>LIVE</h1></a></li>
+      <li><a onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="index.html"><h1>HOME</h1></a></li>
+      <li><a onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="hear.html"><h1>HEAR</h1></a></li>
+      <li><a onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="proj.html"><h1>PROJ</h1></a></li>
+    </ul>
+  </nav>
+  <div id="mask">
+    <nav id="e1">
+      <ul id="e2">
+        <li onmouseout="hovoff('whirb')" onmouseover="hovon('whirb')" id="e3" data-section="0">
+          <a href="#a"><h3>1</h3></a></li>
+        <li onmouseout="hovoff('whirb')" onmouseover="hovon('whirb')" id="e3" data-section="1">
+          <a href="#b"><h3>2</h3></a></li>
+        <li onmouseout="hovoff('whirb')" onmouseover="hovon('whirb')" id="e3" data-section="2">
+          <a href="#c"><h3>2</h3></a></li>
+      </ul>
+    </nav>
+    <div id="container">
+
+      <section id="a">
+        <canvas id="dotty" width="800" height="800"></canvas>
+        <div class="content">
+          <h1>OUR VISUALS</h1>
+          <div class="ext">
+            <hr class="l50">
+            <hr class="hdrop">
+          </div>
+          <div id="site">
+          </div>
+        </div>
+        <div id="content" class="bottom">
+          <h3>Observe our visual manifestations<br></h3>
+          <hr id="hrl">
+          <h2>ART & VIDEO</h2></div>
+      </section>
+      <section id="b">
+      </section>
+      <section id="c">
+        <div id="lineZone"></div>
+        <li class="to-top" data-section="0"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48"><path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path></svg></div>
+
+
+      </section>
+    </div>
+  </div>
+  <script src="network.js"></script>
+  <script src="click.js"></script>
+  <script src="line.js"></script>
+  <script src="onsound.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/client.js"></script>
+
+  <script>
+    leScroll.addEvent('.arrowdown', 1);
+    leScroll.addEvent('#clickme', 0);
+    leScroll.addEvent('.next', 3);
+    leScroll.addEvent('.arrowup', 0);
+  </script>
+</body>
+
+</html>

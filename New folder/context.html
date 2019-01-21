@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>Context</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <script type="text/javascript">
+    (function() {
+      var html = document.getElementsByTagName('html')[0];
+      html.className += ' is-loading';
+
+      window.onload = function() {
+        html.className = String(html.className).replace('is-loading', '');
+      }
+    }());
+  </script>
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <style media="screen">
+  </style>
+</head>
+
+<body> <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div id="mask">
+    <div id="container">
+      <section class="total" id="z2">
+        <center><img id="topimg-spin" class="spinner" alt="" src="pic/pbdata.png"></center>
+
+        <center id="himgcont">
+
+          <img id="arrow" alt="Scroll Down" src="down.png" class="" style=""></center>
+      </section>
+      <section class="total" id="z1">
+        <label for="navmenu"><span class="icon-menu"><div class="mb" id="menu-button"><h1 style="z-index:10;pointer-events:none;">|||</h1></div></span></label>
+        <input type="checkbox" id="navmenu">
+
+        <nav>
+          <ul id="menu" class="mobi-s">
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="context.html">
+                <p>CNTXT</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="associates.html">
+                <p>ASSOC</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="live.html">
+                <p>LIVE</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="audio.html">
+                <p>AUDIO</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="video.html">
+                <p>VIDEO</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="data.html">
+                <p>DATA</p>
+              </a>
+            </li>
+            <div class="social-wrap">
+              <div class="social">
+                <div class="social-item">
+                  <img class="social-img" src="instagram.png" alt=""></div>
+                <div class="social-item">
+                  <img class="social-img" src="facebook.png" alt=""></div>
+                <div class="social-item">
+                  <a href="https://soundcloud.com/crystalline-aether/"><img class="social-img" src="soundcloud.png" alt=""></a></div>
+                <div class="social-item">
+                  <a href="https://github.com/pointblankcompany"><img class="social-img" src="github.png" alt=""></a></div>
+              </div>
+            </div>
+          </ul>
+        </nav>
+        <div class="gold-b" style="top: 0;">
+          <div class="semi" style="overflow:hidden;top:0 !important;">
+            <center style="display:flex;justify-content: center;margin-top:20vh;width:inherit;"><div style="padding:20px;max-width:400px;width:fit-content;height:400px;background-color:#11111155;position:relative;display:block">
+              <h1>Pointblank</h1><hr><h2>Welcomes You</h2><br><p>Our company is your company! We are a grand think tank for which humanity has been yearning.<br><br>To watch our earth slowly decay with our societal attachment to group-think and label rhetoric, its about time we step back and look at the bigger, brighter picture. <br><br>We hope you see this through by our side, we're going to need the backup</p></div></center>
+
+          </div>
+        </div>
+
+
+      </section>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/client.js"></script>
+
+  <script>
+    leScroll.addEvent('.arrowdown', 1);
+    leScroll.addEvent('#clickme', 0);
+    leScroll.addEvent('.next', 3);
+    leScroll.addEvent('.arrowup', 0);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="styleblock.css">
+  <title>Pointblank Company</title>
+
+  <style>
+  </style>
+
+  <script>
+    function drop() {
+      setTimeout(function() {
+        document.getElementById("maindisp").style.cssText = 'bottom:0vh;';
+        document.getElementById("container").style.cssText = 'bottom:-100vh;';
+      }, 100);
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="block1">
+    <div class="middleblock">
+      <header>
+        <div class="corner"></div>
+        <h1 class="stretch2">POINTBLANK</h1>
+      </header>
+
+      <div class="downbutton">
+        <div class="rot">
+        <svg onmousedown="drop()" class="arrow" style="" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+          <path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+        </svg></div></div>
+      <div class="descbox">
+        <div class="text">
+          <h2>Welcome Home</h2>
+          <hr>
+          <p>Here you will discover things you may have deemed impossible.</p>
+          <p><b class="stretch1">Sentient</b> Fellowship</p>
+          <p><b class="stretch1">Modular</b> Consciousness</p>
+          <p><b class="stretch1">Citadel</b> Powerstation</p>
+
+
+        </div>
+      </div>
+      <div class="rightout">
+        <div class="sub1">
+          <a href=""><h1 class="os">OPENSOURCE</h1></a>
+        </div>
+        <div class="sub2">
+          <span style="height:32px;">
+            <h4 style="text-transform:uppercase;">Our <b style="font-family:raj-m;text-decoration:line-through;">Privacy Policy</b> : <b class="res">Respect</b></h4>
+          </span>
+          <span style="height:32px;width:auto;">
+            <p class="ud">It's time to <b>stop abusing</b> user METRIC$ for fiat accumulation</p>
+          </span>
+        </div>
+        <div class="link"></div>
+      </div>
+      <div class="bottomstretch"></div>
+      <footer></footer>
+
+    </div>
+  </div>
+
+  <div class="block2" id="display"><iframe src="" width="100%" height="100%" frameborder="0"></iframe></div>
+  <canvas id="dotty" width="549" height="757" style="position:fixed;"></canvas>
+
+  <script src="network.js"></script>
+
+
+</body>
+
+</html>

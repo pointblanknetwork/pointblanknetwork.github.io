@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    @font-face {
+      font-family: qube;
+      src: url('Qube.ttf');
+    }
+
+    @font-face {
+      font-family: potra;
+      src: url('Neou-Thin.ttf');
+    }
+
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      margin: 0px;
+      background: black;
+      z-index: 0;
+      position: fixed;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: unset;
+      font-family: qube;
+      letter-spacing: 1.2;
+      color: white;
+      opacity: 0.8;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: indianred;
+      width: 100%;
+    }
+
+    a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+      text-decoration: none;
+      line-height: 16px;
+      font-size: 16px;
+      color: white;
+
+    }
+
+    a:hover {}
+
+    a:active {opacity:0.8;}
+
+    hr {
+      height: 1px;
+      border: none;
+      background: white;
+      opacity: 0.05;
+      width: 100%;
+    }
+
+    li {
+      margin: 10px;
+      transform: translatey(0px);
+      transition: transform 100ms ease;
+    }
+
+    li:hover {
+      opacity: 0.8;
+    }
+
+    li:active {
+      transform: translatey(2px)
+    }
+
+    li:nth-child(4) {
+      margin-bottom: 0px;
+    }
+
+    li:nth-child(1) {
+      margin-top: 0px;
+    }
+
+    ul {
+      list-style: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      opacity: 0.5;
+      padding-left: 10px;
+      transition: padding-left 100ms, border-left-width 100ms ease;
+    }
+
+    ul:hover {
+      border-left-width: 3px;
+      padding-left: 20px;
+    }
+
+    .p {
+      font-family: potra;
+
+    }
+
+    .container {
+      background-color: rgba(40, 45, 55, 0.9);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .mainblock {
+      background-image: url(dot.png);
+      position: relative;
+      justify-content: left;
+      margin: auto;
+      width: auto;
+      height: auto;
+      max-width: 800px;
+      max-height: 800px;
+      min-width: 400px;
+      min-height: 400px;
+      display: flex;
+      flex-flow: column;
+      background-blend-mode: multiply;
+      padding: 20px;
+      background-size: 3px;
+      background-color: rgba(40, 45, 55, 0);
+      box-shadow: 0 0 100px rgba(255, 255, 255, 0.0);
+      background-position: center;
+      transition: box-shadow 1s, background-size 1s, filter 500ms ease;
+    }
+
+    .mainblock:hover {
+      border: 0px solid rgba(40, 45, 55, 0.5);
+      background-blend-mode: darken;
+      box-shadow: 0 0 100px rgba(255, 255, 255, 0.0);
+      background-size: 5px;
+
+    }
+
+    .cont {
+      display: flex;
+      flex-flow: row;
+    }
+
+    .left {
+      max-width: 60%;
+    }
+
+    .right {
+      position: absolute;
+      right: 0px;
+      left: 90%;
+      /* display: flex; */
+      /* height: unset; */
+      flex-flow: wrap;
+      transform-origin: 0% 0%;
+      transform: rotate(90deg);
+    }
+
+    .ttb {
+      color: wheat;
+      line-height: 64px;
+      position: absolute;
+      font-size: 64px;
+      letter-spacing: -2px;
+      width: max-content;
+      height: 64px;
+      top: -10;
+      left: -16px;
+      text-transform: uppercase;
+      border-top: 4px solid;
+      transition: padding-right 100ms ease;
+      word-break: none;
+      transition: letter-spacing 100ms, padding-right 100ms ease;
+    }
+
+    .ttb2 {
+      color: skyblue;
+      line-height: 32px;
+      position: absolute;
+      font-size: 16px;
+      letter-spacing: 2px;
+      width: max-content;
+      height: 32px;
+      top: 50px;
+      left: -16px;
+      text-transform: uppercase;
+      border-bottom: 2px solid;
+      transition: padding-right 100ms ease;
+      word-break: none;
+      transition: letter-spacing 100ms, padding-right 100ms ease;
+    }
+
+    .arrow {
+      display: inline;
+      position: absolute;
+      right: 32px;
+      width: 32px;
+      height: 32px;
+      transform: rotate(45deg)translatey(0px);
+      background: rgba(255, 255, 255, 0);
+      filter: invert(0.9);
+      opacity: 0.5;
+      transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+      border-radius: 16px;
+      transition-delay: 1s;
+      mix-blend-mode: multiply;
+
+    }
+
+    .arrow:hover {
+      background: rgba(255, 255, 255, 0.5);
+      transition-delay: 0s;
+      transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+
+      transform: rotate(0deg)translatey(0px);
+      filter: invert(0.9);
+      border-radius: 16px;
+    }
+
+    .arrow:active {
+      transform: rotate(0deg)translatey(2px);
+      filter: invert(0.1);
+      background: rgba(255, 255, 255, 0.1);
+      transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+
+      border-radius: 16px;
+    }
+
+    .ttb:hover {
+      letter-spacing: 2px;
+      padding-right: 100%;
+    }
+
+    .ttb2:hover {
+      letter-spacing: 2px;
+      padding-right: 200%;
+    }
+
+    .outlinks {
+      display: flex;
+      flex-flow: row;
+      height: 32px;
+      position: absolute;
+      bottom: 0px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      width: auto;
+      justify-content: center;
+      border-radius:32px;
+    }
+
+    .icon {
+      padding: 4px;
+      height: 24px;
+      width: 24px;
+      filter: saturate(0)brightness(1)contrast(2)invert(1);
+      mix-blend-mode:screen;
+      border-radius:16px;
+      opacity:0.5;
+    }
+
+    .icon:hover{
+      filter: saturate(0)brightness(1)contrast(2)invert(1);
+      mix-blend-mode:screen;
+      opacity:0.8;
+    }
+
+    #dotty {
+      opacity: 1;
+      filter: brightness(1.2)sepia(0);
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="mainblock">
+      <h1 style="display:inline;">POINTBLANK</h1><svg class="arrow" style="" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+        <path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+      </svg>
+      <hr>
+      <h2>incentivising compassion</h2>
+      <div class="cont">
+        <div class="left">
+          <ul>
+            <li><a target="view" href="1.html">
+                <p>Next Gen Housing</p>
+              </a></li>
+            <li><a target="view" href="2.html">
+                <p>Vote - Via - Tax</p>
+              </a></li>
+            <li><a target="view" href="3.html">
+                <p>Cortex Stimulation</p>
+              </a></li>
+            <li><a target="view" href="4.html">
+                <p>Modular Energy</p>
+              </a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <h2 class="ttb">OPEN SOURCE</h2>
+          <h4 class="ttb2">PRIVACY RESPECTED \ forever</h4>
+        </div>
+        <div class="outlinks" style="">
+          <a href=""><img src="icons/github.png" alt="" class="icon"></a>
+          <a href=""><img src="icons/twitter.png" alt="" class="icon"></a>
+          <a href=""><img src="icons/facebook.png" alt="" class="icon"></a>
+          <a href=""><img src="icons/instagram.png" alt="" class="icon"></a>
+          <a href=""><img src="icons/youtube.png" alt="" class="icon"></a>
+          <a href=""><img src="icons/soundcloud.png" alt="" class="icon"></a>
+        </div>
+      </div>
+      <iframe src="" name="view" frameborder="0"></iframe>
+    </div>
+  </div>
+  <canvas id="dotty" width="800" height="800" style=""></canvas>
+</body>
+<script src="network.js"></script>
+
+</html>

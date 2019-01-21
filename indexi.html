@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[index_01-PB]</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="network.js"></script>
+  <script src="audio.js"></script>
+  <style>
+    #mi>img {
+      width: 20vh;
+      position: absolute;
+      left: 0;
+    }
+
+    .s1 {
+      animation: rot1 25s ease infinite;
+    }
+
+    .s2 {
+      animation: rot2 10s ease infinite;
+    }
+
+    .s3 {
+      animation: rot3 5s ease infinite;
+    }
+
+    @media screen and (max-width:100vh) {
+      #mi>img {
+        width: 20vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <audio id="dbth" preload="auto" src="snd/dbth.mp3"></audio>
+  <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+  <audio id="whirb" preload="auto" src="snd/hov.mp3"></audio>
+  <audio id="buzz" preload="auto" src="snd/buzz2.mp3"></audio>
+  <audio id="buzz2" preload="auto" src="snd/buzz3.mp3"></audio>
+  <audio id="whird" preload="auto" src="snd/page.mp3"></audio>
+  <audio id="whira" preload="auto" src="snd/menu.mp3"></audio> -->
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <script>
+    function saturate() {
+      document.getElementById('container').style.cssText = 'filter:saturate(1);';
+    }
+  </script>
+  <script>
+    function desaturate() {
+      document.getElementById('container').style.cssText = 'filter:saturate(0);';
+    }
+  </script>
+  <div id="mask">
+
+    <div id="container" style="">
+
+      <section id="a" class="maincv" style="mix-blend-mode:normal;" onmouseover="saturate()" onmouseout="desaturate()">
+        <a href="#b"></a>
+        <div class="content">
+          <h1><b>POINTBLANK</b></h1>
+          <div class="ext">
+            <hr class="l50">
+            <hr class="hdrop">
+          </div>
+
+          <div id="site">
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="network.js"></script>
+  <script src="line.js"></script>
+  <script src="onsound.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/client.js"></script>
+  <script>
+    leScroll.addEvent('.arrowdown', 1);
+    leScroll.addEvent('#clickme', 0);
+    leScroll.addEvent('.next', 3);
+    leScroll.addEvent('.arrowup', 0);
+  </script>
+
+</body>
+
+</html>

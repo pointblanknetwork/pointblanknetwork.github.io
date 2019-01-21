@@ -1,63 +1,354 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="The Point Blank Company Offers Turnkey Solutions To Entropy Reduction. Our Research and Development Team is Tackling Human Consciousness Modulation, Redundant Municipal Energy Storage, and Much, Much More. ">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Server</title>
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle,
+:root #header + #content > #left > #rlblock_left,
+:root .content > a > .topline,
+:root .icon.google_button,
+:root .icon.Gplus,
+:root .icon.RSS,
+:root .warning.cookie
+{ display: none !important; }</style>
+
+  <title>The Point Blank Company</title>
+
   <script>
-    function expand() {
-      document.getElementById('view').style.cssText = 'height:80vh;';
-      document.getElementById('intro').style.cssText = 'height:0vh;';
-      document.getElementById('intro').style.cssText = 'display:none;';
+    function scrollToBottom(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = div.scrollHeight - div.clientHeight;
     }
 
-    function contract() {
-      document.getElementById('view').style.cssText = 'height:0vh;';
-      document.getElementById('intro').style.cssText = 'height:80vh;';
-      document.getElementById('intro').style.cssText = 'display:flex;';
+    function scrollToTop(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = 0;
+    }
 
+    //Require jQuery
+    function scrollSmoothToBottom(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: div.scrollHeight - div.clientHeight
+      }, 500);
+    }
+
+    //Require jQuery
+    function scrollSmoothToTop(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: 0
+      }, 500);
+    }
+  </script>
+
+  <script>
+    function info1() {
+      document.getElementById('info2').style.cssText = 'opacity:1;';
+    }
+
+    function info0() {
+      document.getElementById('info2').style.cssText = 'opacity:0;';
+    }
+  </script>
+  <script>
+    function dim() {
+      document.getElementById('window').style.cssText = 'filter:saturate(0)brightness(0.5);';
+    }
+
+    function bright() {
+      document.getElementById('window').style.cssText = 'filter:saturate(1)brightness(1);';
+    }
+  </script>
+  <script>
+    function appadd() {
+      document.getElementById('apps').style.cssText = 'display:flex;';
+      document.getElementById('brev').style.cssText = 'display:none;';
+    }
+      function apprev() {
+        document.getElementById('apps').style.cssText = 'display:none;';
+        document.getElementById('brev').style.cssText = 'display:flex;';
+      }
+  </script>
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <script>
+    window.onscroll = function() {
+      header()
+    };
+
+    function header() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").className = "h-margin";
+      } else {
+        document.getElementById("header").className = "";
+      }
+    }
+  </script>
+  <script>
+    function link() {
+      setTimeout(function() {
+        scrollSmoothToBottom('reel')
+      }, 500);
 
     }
   </script>
-</head>
+<style type="text/css">
+:root .warning.cookie,
+:root .icon.RSS,
+:root .icon.Gplus,
+:root .icon.google_button,
+:root .content > a > .topline,
+:root #header + #content > #left > #rlblock_left,
+:root #content > #center > .dose > .dosesingle,
+:root #content > #right > .dose > .dosesingle
+{ display: none !important; }</style></head>
 
-<body>
-  <header>
-    <a href="hardware.html" onmousedown="expand() " target="view"><h3>HARDWARE</h3></a>
-    <a href="software.html" onmousedown="expand()" target="view"><h3>SOFTWARE</h3></a>
-    <a href="inquire.html" onmousedown="contract()" target="view"><h3>HOME</h3></a>
-  </header>
-  <section>
-    <article id="intro">
-      <div class="centered">
-        <div class="left-2">
-          <h1 class="tables" style="margin:0.75rem;">h<br>j</h1>
-        </div>
+<body onscroll="header()" id="reel">
+  <audio id="consc" preload="auto" src="snd/headerhover.mp3"></audio>
+  <audio id="whirc" preload="auto" src="snd/s3.mp3"></audio>
+  <audio id="whirb" preload="auto" src="snd/s1.mp3"></audio>
+  <audio id="whira" preload="auto" src="snd/sh.mp3"></audio>
+  <audio id="whird" preload="auto" src="snd/s4.mp3"></audio>
+  <audio id="whirf" preload="auto" src="snd/s5.mp3"></audio>
+  <audio id="whirg" preload="auto" src="snd/sel.mp3"></audio>
+  <audio id="whirh" preload="auto" src="snd/err.mp3"></audio>
+  <audio id="intro" preload="auto" autoplay="" loop="" src="snd/lab.mp3"></audio>
+  <div id="loc-b">
+  </div>
 
-        <div class="right-2">
-          <h3 class="bold">This timline is protected</h3>
-          <p>We are a team of ADHD driven machine elves <br> manifesting a better future.</p>
+  <div class="block1" id="loc-a">
+    <div class="middleblock">
+      <header id="header" class="">
+        <div class="corner"></div>
+        <h1 class="header stretch2" onmouseover="hovon('whira')">POINTBLANK</h1>
+      </header>
+
+      <div class="downbutton" onmousedown="hovon('whirg')" onmouseup="link()">
+        <a href="menu.html" style="margin:0;width:inherit;height:inherit;" target="window">
+          <div class="rot" onmouseover="hovon('whirb')">
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+              <path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+            </svg></div>
+        </a>
+      </div>
+      <div class="descbox">
+        <div class="text" style="text-transform:capitalize;">
+          <h2 style="font-family:raj-l;">Build <b>With Us</b></h2>
+          <hr class="hr2">
+          <p>We are a team of conscious agents working towards a better world, through optimization of antiquated systems and <a href="resdev.html" target="window" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown="hovon('whirg')" onmouseup="link()"><b>research
+                &amp; development </b></a>of
+            open-source technologies.</p>
+          <a onmouseover="hovon('whirc')" href="mailto:pointblank.connect@gmail.com">
+            <p style="text-transform:uppercase;display:inline;"><b>[ EMAIL ]</b></p>
+          </a>
+          <a onmouseover="hovon('whirc')" href="sms:5033349436">
+            <p style="text-transform:uppercase;display:inline;"><b>[ SMS ]</b></p>
+          </a>
         </div>
       </div>
-    </article>
-    <div class="view" id="view"><iframe style="width:100%;left:0;height:80vh;" src="about.html" name="view" frameborder="0"></iframe></div>
-  </section>
-  <footer>
-    <div class="left">
-      <a class="x-axis" href="" target="_blank"><h4>Social</h4></a>
-      <a class="x-axis" href="https://github.com/pointblanknetwork" target="_blank"><h4>Github</h4></a>
-      <a class="x-axis" href="404.html" target=""><h4>Archive</h4></a>
-      <a class="x-axis" target="_blank" href="view-source:https://www.pointblank.network/index.html">
-        <h4>source</h4></a>
-    </div>
-    <div class="right light">
-      <a class="x-axis-rev" href="mailto:pointblank.network@gmail.com" target="">
-        <h2 style="line-height:1rem;">CONTACT</h2></a>
-    </div>
-  </footer>
-</body>
+      <div class="rightout">
 
-</html>
+        <script>
+          function viewSource() {;
+            var source = "<html>";
+            source += document.getElementsByTagName('html')[0].innerHTML;
+            source += "</html>";
+            source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            source = "<pre>" + source + "</pre>";
+            sourceWindow = window.open('', 'Source of page', 'height=800,width=800,scrollbars=1,resizable=1');
+            sourceWindow.document.write(source);
+            sourceWindow.document.close();
+            if (window.focus) sourceWindow.focus();
+          }
+        </script>
+        <div class="sub1" onmouseover="hovon('whirf')" onmousedown="viewSource()">
+          <h1 class="os">OPENSOURCE</h1>
+        </div>
+
+        <div class="sub2">
+          <span>
+            <h4 class="privpol-text" style="text-transform:uppercase;">Our <b style="font-family:raj-m;text-decoration:line-through;">Privacy Policy</b> : <b class="res">Respect</b></h4>
+          </span>
+          <span>
+            <p class="ud">It's time to <b>stop abusing</b> user METRIC$ for fiat accumulation</p>
+          </span>
+        </div>
+        <div class="link">
+          <div class="consciousness" onmouseover="hovon('consc')">
+            <div class="conscioustext" style="">
+              <h2 class="CC">Conscious Coherence</h2>
+            </div><iframe id="conscious" width="100%" src="https://web.archive.org/web/20180713035104if_/http://gcpdot.com/gcpchart.php" frameborder="0"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bottomstretch">
+        <div id="brev" style="display: flex;">
+          <div class="b1">
+            <a onmouseover="hovon('whirc')" onmousedown="hovon('whirg')"><h1 onmouseup="appadd()">APPS</h1></a>
+          </div>
+          <div class="b2">
+          <a onmouseover="hovon('whirc')" onmousedown="hovon('whirg')" onmouseup="link()" href="links.html" target="window">
+            <h1 style="text-transform:uppercase;display:inline;"><b>Data</b></h1>
+          </a></div>
+        </div>
+        <ul class="apps" id="apps" style="display: none;">
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://arxiv.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/arxiv.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://archive.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/archive.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://wikileaks.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/wikil.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://8ch.net/index.html" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/8chan.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://www.khanacademy.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/khan.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.allaboutcircuits.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/allabout.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://www.w3schools.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/w3.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://atom.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/atom.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.10bestdesign.com/dirtymarkup/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/markup.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.privacytools.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/privacy.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://1.1.1.1/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/1111.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://adnauseam.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/adnauseam.gif"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://getfoxyproxy.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/foxy.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://getadblock.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/adblock.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.ublock.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/ublock.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://geti2p.net/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/I2P.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://www.torproject.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/tor.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://tails.boum.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/tails.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://justgetflux.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/flux.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://openai.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/openai.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://web.archive.org/web/20181126014043/http://global-mind.org/gcpdot/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/gcp.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.audacityteam.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/aud.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.qubes-os.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/cube.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://ninite.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/ninite.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://thepiratebay.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/tpb.png"></a>
+          </li>
+          <li class="icon-o" onmousedown="hovon('whirg')" onmouseup="link()">
+            <a href="https://www.deluge-torrent.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="window"><img alt="" class="icon" src="icons/deluge.png"></a>
+          </li>
+          <li class="icon-o">
+            <a href="https://protonmail.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/proton.png"></a>
+          </li>
+          <div style="width:inherit;display:flex;flex-flow:row;justify-content:center;" onmousedown="hovon('whirg')" onmouseup="apprev()"><a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')"><h2>RETURN</h2></a></div>
+        </ul>
+      </div>
+      <footer>
+        <div class="warning" onmouseover="hovon('whirh')">
+          <h1 style="width:64px;height:64px;background-color:aliceblue;text-align:center;" class="warn background">X</h1>
+        </div>
+        <div class="warn-info">
+          <h2 class="alice">WARNING</h2>
+          <hr class="full-hr">
+          <h2 class="alice">WEB 5 . 0</h2>
+        </div>
+        <div class="rest">
+          <ul class="outlinks">
+            <li class="icon-o">
+              <a href="https://github.com/pointblankcompany" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/github.png"></a>
+            </li>
+            <li class="icon-o" onmousedown="hovon('whirg')">
+              <a href="https://www.facebook.com/thepointblankcompany/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/facebook.png"></a>
+            </li>
+            <li class="icon-o" onmousedown="hovon('whirg')">
+              <a href="https://www.instagram.com/pointblank_company/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/instagram.png"></a>
+            </li>
+            <li class="icon-o">
+              <a href="https://www.linkedin.com/company/pointblank-company/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="icons/linkedin.png"></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <div class="display">
+      <div id="dispres2" onmouseover="info1(), dim(), hovon('whirc')" onmouseout="info0(), bright()">
+        <p id="info2" style="opacity: 0;">return to landing</p>
+        <svg onmousedown="scrollSmoothToTop('reel'), hovon('whirg')" class="bottom-res" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+          <path style="fill:black;transform:translatey(-2px);" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+
+          <path style="fill:aliceblue;transform:translatey(0px);z-index:-1;position:absolute;" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+        </svg>
+
+      </div>
+      <iframe id="window" src="links.html" width="100%" height="100%" name="window" frameborder="0" style="filter: saturate(1) brightness(1);"></iframe>
+    </div>
+  </div>
+
+
+  <canvas id="dotty" width="313" height="672" style="position:fixed;"></canvas>
+
+  <script src="network.js"></script>
+
+
+
+
+
+
+</body></html>

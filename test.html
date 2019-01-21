@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Document</title>
+
+  <style>
+    @font-face {
+      font-family: raj-l;
+      src: url(fonts/Rajdhani-Light.ttf);
+    }
+      @font-face {
+        font-family: raj-b;
+        src: url(fonts/Rajdhani-Bold.ttf);
+      }
+
+    .fontbox {
+      min-height: 100vh;
+      position: relative;
+      width: 100vw;
+      display: flex;
+      background: darkgray;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+
+        h1,
+        h2{      font-family: raj-b;
+}
+    h3,
+    h4,
+    p {
+      color:black;
+      font-family: raj-l;
+    }
+  </style>
+
+</head>
+
+<body style="margin:0px;background-gray;overflow-y:scroll;overflow-x:hidden;display:flex;flex-flow:column;justify-content:flex-start;height:100vh;width:">
+  <div class="fontbox">
+    <h1 style="font-size:64px;line-height:64px;margin:4px;">TEST 64px</h1>
+    <h1 style="font-size:48px;line-height:48px;margin:4px;">h1 TEST 48px</h1>
+    <h2 style="font-size:32px;line-height:32px;margin:4px;">H2 TEsting sIze 32px</h2>
+
+    <h2 style="font-size:16px;line-height:16px;margin:4px;">h3Test 16px</h2>
+
+    <p>H2 TEsting sIze</p>
+  </div>
+  <div style="width:512px;min-height:512px;background:indianred;position:relative;left:0;display:flex;flex-flow:column;justify-content:center;">
+    <h2>Benat</h2>
+  </div>
+  <div style="width:256px;min-height:256px;background:wheat;position:relative;left:0;display:flex;flex-flow:column;justify-content:center;">
+    <h2>Benat</h2>
+  </div>
+  <div style="transform:rotate(45deg);margin:auto;width:256px;min-height:256px;background:wheat;position:relative;left:0;display:flex;flex-flow:column;justify-content:center;">
+    <h2>Benat</h2>
+  </div>
+
+</body>
+
+</html>

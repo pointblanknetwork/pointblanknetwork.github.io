@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>[tech-dl]</title>
+</head>
+
+<body>
+  <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+  <audio id="whirb" preload="auto" src="snd/hov.mp3"></audio>
+  <audio id="whird" preload="auto" src="snd/page.mp3"></audio>
+  <audio id="whira" preload="auto" src="snd/menu.mp3"></audio>
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <div id="mask" class="dot-sh">
+    <div id="container">
+
+      <section id="a" class="mixy">
+        <div class="apps">
+          <div class="quicklink">
+            <div class="ql-ico">
+              <a href="https://arxiv.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/arxiv.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://archive.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/archive.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://wikileaks.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/wikil.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://8ch.net/index.html" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/8chan.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.khanacademy.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/khan.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.allaboutcircuits.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/allabout.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.w3schools.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/w3.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://atom.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/atom.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.10bestdesign.com/dirtymarkup/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/markup.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.privacytools.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/privacy.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://1.1.1.1/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/1111.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://adnauseam.io/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/adnauseam.gif"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://getfoxyproxy.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/foxy.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://getadblock.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/adblock.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.ublock.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/ublock.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://geti2p.net/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/I2P.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.torproject.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/tor.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://tails.boum.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/tails.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://justgetflux.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/flux.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://openai.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/openai.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://gcpdot.com/gcpchart.php" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/gcp.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.audacityteam.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/aud.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.qubes-os.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/cube.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://ninite.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/ninite.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://thepiratebay.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/tpb.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://www.deluge-torrent.org/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/deluge.png"></a>
+            </div>
+            <div class="ql-ico">
+              <a href="https://protonmail.com/" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" target="_blank"><img alt="" class="icon" src="https://www.pointblank.company/icons/proton.png"></a>
+            </div>
+            <canvas id="dotty" width="800" height="800" style="z-index:-1;position:fixed;"></canvas>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="network.js"></script>
+
+</body>
+
+</html>

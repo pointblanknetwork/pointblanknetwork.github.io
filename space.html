@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>0</title>
+</head>
+
+<body>
+  <style>
+    body {
+      overflow: hidden;
+      border:none;
+    }
+
+    .spinner-holder {
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      position: absolute;
+    }
+
+    .spinnercont {
+      margin: 0px auto;
+      width: 80vw;
+      height: 80vw;
+      position: relative;
+      overflow: hidden;
+      max-height:100vh
+    }
+
+    .spinnercont img {
+      width: 80vw;
+      max-width:100vh;
+      top: 0;
+      position: absolute;
+    }
+
+    #s1 {
+      animation: spin 10s ease infinite;
+    }
+
+    #s2 {
+      animation: spin 20s ease infinite;
+    }
+
+    #s3 {
+      animation: spin 30s ease infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      20% {
+        transform: rotate(500deg);
+      }
+      40% {
+        transform: rotate(200deg);
+      }
+      60% {
+        transform: rotate(100deg);
+      }
+      80% {
+        transform: rotate(600deg);
+      }
+      100% {
+
+        transform: rotate(0deg);
+      }
+    }
+
+    }
+  </style>
+  <div class="spinner-holder">
+
+    <div class="spinnercont">
+      <img src="thing1.png" id="s1" alt="">
+      <img src="thing3.png" id="s2" alt="">
+      <img src="thing2.png" id="s3" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

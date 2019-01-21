@@ -1,0 +1,115 @@
+<!DOCTYpE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+
+  <title>links</title>
+
+
+  <script>
+    function scrollToBottom(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = div.scrollHeight - div.clientHeight;
+    }
+
+    function scrollToTop(id) {
+      var div = document.getElementById(id);
+      div.scrollTop = 0;
+    }
+
+    //Require jQuery
+    function scrollSmoothToBottom(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: div.scrollHeight - div.clientHeight
+      }, 500);
+    }
+
+    //Require jQuery
+    function scrollSmoothToTop(id) {
+      var div = document.getElementById(id);
+      $('#' + id).animate({
+        scrollTop: 0
+      }, 500);
+    }
+  </script>
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <script>
+    function disp() {
+      setTimeout(function() {
+        scrollSmoothToBottom('linkreel')
+        document.getElementById('metricview').style.cssText = 'height:100vh;';
+        document.getElementById('dispres').style.cssText = 'display:block;';
+      }, 100);
+
+    }
+  </script>
+
+  <script>
+    function info1() {
+      document.getElementById('info').style.cssText = 'opacity:1;';
+    }
+
+    function info0() {
+      document.getElementById('info').style.cssText = 'opacity:0;';
+    }
+  </script>
+
+  <script>
+    function res() {
+      setTimeout(function() {
+        scrollSmoothToTop('linkreel')
+        document.getElementById('metricview').style.cssText = 'height:0vh;';
+        document.getElementById('dispres').style.cssText = 'display:none;';
+      }, 100);
+
+    }
+  </script>
+</head>
+
+<body>
+  <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+
+  <div class="scroll-default" style="" id="linkreel">
+    <div class="linkbox" style="margin:auto;">
+      <h2 class="l-title" style="font-family:raj-l;">Machine Elves Are <b>Hard At Work</b></h2>
+      <hr class="full-hr">
+      <span class="linklist">
+        <h4>Meanwhile visit our active development branch <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" onmousedown="disp()" target="data-frame" href="https://www.anthropic.tech"><b>anthropic technology</b></a></h4>
+      </span>
+    </div>
+
+      <div id="metricview">
+        <div id="dispres">
+          <p id="info">return to links</p>
+          <svg onmousedown="res()" class="bottom-res-2" onmouseover="info1()" onmouseout="info0()" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+            <path style="fill:black;transform:translatey(-2px);" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+            <path style="fill:aliceblue;transform:translatey(0px);z-index:-1;position:absolute;" d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+          </svg>
+        </div>
+
+        <iframe src="" width="100%" height="100%" name="data-frame" frameborder="0"></iframe>
+      </div>
+
+</body>
+
+</html>

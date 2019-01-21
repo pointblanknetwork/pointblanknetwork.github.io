@@ -1,0 +1,955 @@
+@font-face {
+  font-family: qube;
+  src: url('Qube.ttf');
+}
+
+@font-face {
+  font-family: potra;
+  src: url('Neou-Thin.ttf');
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0px;
+  background: black;
+  z-index: 0;
+  position: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: unset;
+  font-family: qube;
+  letter-spacing: 1px;
+  color: wheat;
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 64px;
+  color: indianred;
+  z-index: 5;
+  width: 100%;
+  margin-top: -16px;
+}
+
+a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+  text-decoration: none;
+  line-height: 16px;
+  font-size: 16px;
+  color: wheat;
+}
+
+a:hover {}
+
+a:active {}
+
+hr {
+  height: 1px;
+  border: none;
+  background: wheat;
+  opacity: 0.25;
+  width: 100%;
+}
+
+li {
+  margin: 10px;
+  transform: translatey(0px);
+  transition: transform 100ms ease;
+}
+
+li:hover {
+  opacity: 0.8;
+}
+
+li:active {
+  transform: translatey(2px)
+}
+
+li:nth-child(4) {
+  margin-bottom: 0px;
+}
+
+li:nth-child(1) {
+  margin-top: 0px;
+}
+
+.anthropic {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  right: 128px;
+  z-index: 4;
+  top: 156px;
+  transform: rotate(90deg);
+  transition: opacity 100ms, padding-left 100ms, padding-right 100ms, margin-left 100ms, margin-right 100ms ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  padding-right: 4px;
+  transition-delay: 100ms;
+}
+
+.anthropic:hover {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 2px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  transition-delay: 100ms;
+}
+
+ul {
+  top: 64px;
+  right: 256px;
+  list-style: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+  padding-left: 10px;
+  transition: padding-left 100ms, border-left-width 100ms ease;
+}
+
+ul:hover .anthropic {
+  display: block;
+  opacity: 1;
+  transition-delay: 100ms;
+}
+
+ul:hover {
+  border-left-width: 3px;
+  padding-left: 20px;
+}
+
+.p {
+  font-family: potra;
+}
+
+#maindisp {
+  bottom: 100vh;
+  transition: bottom 100ms ease;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+}
+
+#container {
+  bottom: 0vh;
+  transition: bottom 100ms ease;
+  background-color: rgba(40, 45, 55, 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.mainblock {
+  /* background-image: url(x.png); */
+  position: relative;
+  justify-content: left;
+  margin: auto;
+  width: auto;
+  height: auto;
+  transform: rotate(-45deg);
+  max-width: 800px;
+  max-height: 800px;
+  min-width: 420px;
+  min-height: 420px;
+  display: flex;
+  flex-flow: column;
+  background-blend-mode: multiply;
+  padding: 20px;
+  padding-bottom: 40px;
+  background-size: 3px;
+  background-color: rgba(40, 45, 55, 0);
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.0);
+  background-position: center;
+  transition: box-shadow 100ms, background-size 100ms, filter 500ms ease;
+}
+
+.mainblock:hover {
+  border: 0px solid rgba(40, 45, 55, 0.5);
+  background-blend-mode: darken;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.0);
+  background-size: 5px;
+}
+
+.cont {
+  display: flex;
+  flex-flow: row;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  position: absolute;
+  right: 30px;
+  /* left: 90%; */
+  /* display: flex; */
+  /* height: unset; */
+  flex-flow: wrap;
+  transform-origin: 0% 0%;
+  transform: rotate(90deg);
+}
+
+.ttb {
+  color: wheat;
+  line-height: 64px;
+  position: absolute;
+  font-size: 64px;
+  letter-spacing: -2px;
+  width: max-content;
+  width: -moz-max-content;
+  height: 64px;
+  top: -10;
+  left: -16px;
+  text-transform: uppercase;
+  border-top: 4px solid;
+  transition: padding-right 100ms ease;
+  word-break: none;
+  transition: letter-spacing 100ms, padding-right 100ms ease;
+}
+
+.ttb2 {
+  color: indianred;
+  line-height: 32px;
+  position: absolute;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: max-content;
+  width: -moz-max-content;
+  height: 32px;
+  top: 50px;
+  left: -16px;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  transition: padding-right 100ms ease;
+  word-break: none;
+  transition: letter-spacing 100ms, padding-right 100ms ease;
+}
+
+.arrow {
+  display: inline;
+  position: absolute;
+  right:16px;
+  z-index: 6;
+  top:16px;
+  background: transparent;
+  width: 64px;
+  height: 64px;
+  transform: rotate(45deg)translatey(0px);
+  opacity: 0.8;
+  transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+  transition-delay: 100ms;
+}
+.arrow path{fill:indianred;}
+
+.arrow:hover {
+  transition-delay: 100ms;
+  transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+  transform: rotate(45deg);
+  animation: up 1s;
+}
+
+.arrow:active {
+  transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+}
+
+.ttb:hover {
+  letter-spacing: 2px;
+  padding-right: 100%;
+}
+
+.ttb2:hover {
+  letter-spacing: 2px;
+  margin-right: 200%;
+}
+
+.outlinks {
+  display: flex;
+  flex-flow: row;
+  height: 32px;
+  position: absolute;
+  bottom: 20px;
+  border: 1px solid rgba(245, 222, 179, 0.5);
+  width: auto;
+  justify-content: center;
+  border-radius: 32px;
+}
+
+.icon {
+  padding: 4px;
+  height: 24px;
+  width: 24px;
+  filter: sepia(1)brightness(1)contrast(1)invert(0);
+  mix-blend-mode: screen;
+  border-radius: 16px;
+  opacity: 0.5;
+}
+
+.icon:hover {
+  filter: sepia(1)brightness(1)contrast(2)invert(1);
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+}
+
+.r {
+  text-align: right;
+}
+
+.blob {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  background-color: rgba(0, 0, 0, 0.00);
+  padding: 16px;
+  justify-content: center;
+  display: flex;
+  right: 134px;
+  flex-flow: column;
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
+  top: 246px;
+  transition: background-color 100ms, border-top-width 100ms, border-bottom-width 100ms ease;
+}
+
+@keyframes up {
+  0% {
+    transform: translatey(0px)rotate(45deg);
+  }
+
+  5% {
+    transform: translatey(5px)translatex(-5px)rotate(45deg);
+
+  }
+
+  10% {
+    transform: translatey(0px)rotate(45deg);
+  }
+
+  15% {
+    transform: translatey(5px)translatex(-5px)rotate(45deg);
+  }
+
+  20% {
+    transform: translatey(0px)rotate(45deg);
+  }
+
+  100% {
+    transform: translatey(0px)rotate(45deg);
+  }
+}
+
+@keyframes up2 {
+  0% {
+    transform: translatey(0px);
+  }
+
+  5% {
+    transform: translatey(5px);
+
+  }
+
+  10% {
+    transform: translatey(0px);
+  }
+
+  15% {
+    transform: translatey(5px);
+
+  }
+
+  20% {
+    transform: translatey(0px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#source-code {
+  display: none;
+}
+
+#source-code:target {
+  display: block;
+}
+
+.blob:hover {
+  z-index:3;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: background-color 100ms, border-top 100ms, border-bottom 100ms ease;
+}
+
+.rotator {
+  filter:sepia(1);
+  z-index:2;
+  position: absolute;
+  right: 128px;
+  width: 128px;
+  height: 128px;
+  mix-blend-mode: overlay;
+  background-color: #242932;
+  background-blend-mode: exclusion;
+  background-image: url(icons/pointblank.png);
+  background-size: cover;
+  top: 100px;
+  border-radius: 64px;
+  animation: spin 10s linear infinite;
+}
+
+.rotator:hover {
+  animation-play-state: paused;
+}
+
+.stretch {
+  letter-spacing: normal;
+  transition: letter-spacing 100ms ease;
+}
+
+.stretch:hover {
+  letter-spacing: 1.1px;
+}
+
+.slideleft {
+  transform-origin: center top;
+  transform: rotate(0deg);
+  transition: transform 100ms ease;
+  transition-delay: 500ms;
+}
+
+.slideleft:hover {
+  transform: translatex(-50%)rotate(45deg)scale(1.2);
+  transition-delay: 0s;
+}
+
+.lbtr {
+  transform-origin: 10% center;
+  transform: rotate(0deg);
+  transition: transform 100ms ease;
+  transition-delay: 500ms;
+}
+
+.lbtr:hover {
+  transform: rotate(45deg);
+  transition-delay: 0s;
+}
+
+.tlbr {
+  transform-origin: left top;
+  transform: rotate(0deg);
+  transition: transform 100ms ease;
+  transition-delay: 100ms;
+}
+
+.tlbr:hover {
+  transform: rotate(-45deg);
+  transition-delay: 0s;
+}
+
+.lbtr2 {
+  transform-origin: center top;
+  transform: rotate(0deg);
+  transition: transform 100ms, border-width 100ms, box-shadow 100ms, background-color 100ms ease;
+  transition-delay: 500ms;
+}
+
+.lbtr2:hover {
+  transition: transform 100ms, border-width 100ms, box-shadow 100ms, background-color 100ms ease;
+  transform: rotate(45deg)translatey(-156px)translateX(32px)scale(2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  border-width:0px;
+  transition-delay: 0s;
+}
+
+.tlbr2 {
+  transform-origin: right center;
+  transform: rotate(0deg);
+  transition: transform 100ms ease;
+  transition-delay: 100ms;
+}
+
+.tlbr2:hover {
+  transform: rotate(22.5deg);
+  transition-delay: 0s;
+}
+
+#dotty {
+  opacity: 1;
+  filter: brightness(1.2)sepia(0);
+  z-index: 1;
+  position: absolute;
+}
+
+@media screen and (max-width:100vh) {
+  .arrow {
+    display: inline;
+    position: absolute;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    transform: rotate(0deg)translatey(0px);
+    transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+    transition-delay: 100ms;
+    mix-blend-mode: multiply;
+  }
+
+  .arrow:hover {
+    transition-delay: 100ms;
+    transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+    transform: rotate(0deg)translatey(0px);
+    animation: up2 1s;
+  }
+
+  .arrow:active {
+    transform: rotate(0deg)translatey(2px);
+    transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+  }
+
+  .mainblock {
+    transform: rotate(0deg);
+  }
+
+  .slideleft {
+    transform-origin: left bottom;
+    transform: rotate(0deg);
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .slideleft:hover {
+    transform: translatex(0);
+    transition-delay: 0s;
+  }
+
+  .lbtr {
+    transform-origin: left bottom;
+    transform: rotate(0deg);
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr:hover {
+    transform: translatex(15%);
+    transition-delay: 0s;
+  }
+
+  .tlbr {
+    transform-origin: left top;
+    transform: rotate(0deg);
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr:hover {
+    transform: rotate(0deg);
+    transition-delay: 0s;
+  }
+
+  .lbtr2 {
+    transform-origin: left top;
+    transform: rotate(0deg);
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr2:hover {
+    transform: translatex(0%)translatey(-5%);
+    transition-delay: 0s;
+  }
+
+  .tlbr2 {
+    transform-origin: right top;
+    transform: rotate(0deg);
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr2:hover {
+    transform: translatey(2px);
+    transition-delay: 0s;
+  }
+}
+
+@media screen and (max-height:600px) {
+  .slideleft {
+    transform-origin: left bottom;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .slideleft:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .lbtr {
+    transform-origin: left bottom;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .tlbr {
+    transform-origin: left top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .lbtr2 {
+    transform-origin: left top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr2:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .tlbr2 {
+    transform-origin: right top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr2:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .mainblock {
+    transform: rotate(0deg)scale(0.8);
+  }
+}
+
+
+@media screen and (max-height:500px){
+  .mainblock {
+    transform: rotate(0deg)scale(0.7);
+  }}
+
+@media screen and (max-width:500px) {
+  .anthropic {
+    top: 64px;
+    display: block;
+    opacity: 1;
+    right: 24px;
+  }
+    .rotator {display: none;
+    }
+
+  .outlinks {
+    display: flex;
+    flex-flow: row;
+    height: 32px;
+    position: absolute;
+    /* bottom: 128px; */
+    border: 1px solid wheat;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* left: 4px; */
+    /* right: 4px; */
+    justify-content: center;
+    border-radius: 32px;
+  }
+
+  .anthropic a h3 {
+    font-size: 32px;
+  }
+
+  .slideleft {
+    transform-origin: left bottom;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .slideleft:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .lbtr {
+    transform-origin: left bottom;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .tlbr {
+    transform-origin: left top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .lbtr2 {
+    transform-origin: left top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .lbtr2:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  .tlbr2 {
+    transform-origin: right top;
+    transform: unset;
+    transition: transform 100ms ease;
+    transition-delay: 100ms;
+  }
+
+  .tlbr2:hover {
+    transform: unset;
+    transition-delay: 0s;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .container {
+    margin-to: -64px;
+  }
+
+  .left {
+    width: 60%;
+  }
+
+  .right {
+    width: 100vw;
+    position: fixed;
+  }
+
+  .ttb {
+    color: wheat;
+    line-height: 36px;
+    position: absolute;
+    font-size: 32px;
+    letter-spacing: -2px;
+    width: max-content;
+    width: -moz-max-content;
+    height: 32px;
+    top: -54px;
+    left: unset;
+    right: -22px;
+    text-transform: uppercase;
+    border-top: 2px solid;
+    transition: padding-right 100ms ease;
+    word-break: none;
+    transition: letter-spacing 100ms, padding-right 100ms ease;
+  }
+
+  .ttb2 {
+    padding-left: 8px;
+    border-top: 16px solid indianred;
+    border-left: 16px solid indianred;
+    color: indianred;
+    line-height: 32px;
+    position: absolute;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 100vw;
+    height: 32px;
+    top: 0px;
+    left: 0px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    transition: padding-right 100ms ease;
+    word-break: none;
+    transition: letter-spacing 100ms, padding-right 100ms ease;
+  }
+
+  .ttb:hover {
+    padding-right: unset;
+  }
+
+  .mainblock {
+    padding: 2px;
+    min-width: unset;
+    max-height: unset;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    background-image: none;
+  }
+
+  ul {
+    margin-left: 2px;
+  }
+
+  h1 {
+    font-size: 48px;
+    padding-left: 16px;
+    left: 0px;
+    /* position: fixed; */
+    color: #242932;
+    background: indianred;
+  }
+
+      .arrow {
+        display: inline;
+        position: absolute;
+        right: 0px;
+        /* border-left: 1px solid wheat; */
+        /* border-bottom: 1px solid wheat; */
+        width: 30%;
+        top: 41px;
+        height: auto;
+        transform: rotate(0deg)translatey(0px);
+        background: transparent;
+        transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+        border-bottom-left-radius: 50%;
+        transition-delay: 100ms;
+        mix-blend-mode: multiply;
+      }
+  .mainblock h2 {
+    padding-left: 4px;
+  }
+
+  .blob {
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0)!important;
+    /* height: min-content; */
+    height: -moz-fit-content;
+    /* filter: invert(0.1); */
+    padding: 4px;
+    /* padding-top: 4px; */
+    right: 4px;
+    /* padding-bottom: 4px; */
+    height: auto;
+    position: absolute;
+    box-shadow: unset!important;
+    bottom: 60px;
+    left: 4px;
+    top: 160px;
+    transition: filter 100ms ease;
+  }
+
+  .right {
+    position: absolute;
+    width: inherit;
+    bottom: 0px;
+    left: 36px;
+    right: 30px;
+    /* left: 90%; */
+    /* display: flex; */
+    /* height: unset; */
+    flex-flow: wrap;
+    transform-origin: unset;
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width:350px) {
+  h1{font-size:32px;line-height: 32px;/* top: 50px; */}
+  .anthropic a h3 {
+    font-size: unset;
+  }
+  .outlinks{bottom: 128px;margin: auto;position: static;}
+  .blob{height:fit-content;}
+li{margin:4px;}
+      .arrow {
+        display: inline;
+        position: absolute;
+        top: 18px;
+        right: 0px;
+        width: 25%;
+        border-radius: 50%;
+        border-top-left-radius: 0%;
+        height: auto;
+        transform: rotate(0deg)translatey(0px);
+        transition: transform 100ms, background 100ms, border-radius 100ms, filter 100ms ease;
+        transition-delay: 100ms;
+        mix-blend-mode: normal;
+        border-bottom-right-radius: 0px;
+      }
+
+  .ttb {
+    color: wheat;
+    line-height: 36px;
+    position: absolute;
+    font-size: 36px;
+    letter-spacing: -2px;
+    width: auto;
+    width: -moz-max-content;
+    height: 32px;
+    /* padding-left: unset!important; */
+    left: 0px;
+    letter-spacing: 1;
+    width: 100vw;
+    top: -112px;
+    /* left: unset; */
+    right: 0px;
+    text-transform: uppercase;
+    border-top: 2px solid;
+    transition: padding-right 100ms ease;
+    word-break: none;
+    transition: letter-spacing 100ms, padding-right 100ms ease;
+  }
+
+  .ttb2 {
+    margin-top: 0px;
+    color: indianred;
+    line-height: 32px;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 2px;
+    top: -64px;
+    width: 100vw;

@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>Pointblank</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <script type="text/javascript">
+    (function() {
+      var html = document.getElementsByTagName('html')[0];
+      html.className += ' is-loading';
+
+      window.onload = function() {
+        html.className = String(html.className).replace('is-loading', '');
+      }
+    }());
+  </script>
+  <script>
+    function hovon(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function hovoff(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <style media="screen">
+  </style>
+</head>
+
+<body> <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div id="mask">
+    <div id="container">
+      <section class="total" id="z2">
+        <center><img id="topimg-spin" class="spinner" alt="" src="pic/pbdata.png"></center>
+
+        <center id="himgcont">
+
+          <img id="arrow" alt="Scroll Down" src="down.png" class="" style=""></center>
+      </section>
+      <section class="total" id="z1">
+        <label for="navmenu"><span class="icon-menu"><div class="mb" id="menu-button"><h1 style="z-index:10;font-family: sans-serif; !important;pointer-events:none;">|||</h1></div></span></label>
+        <input type="checkbox" id="navmenu">
+
+        <nav>
+          <ul id="menu" class="mobi-s">
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="context.html">
+                <p>CNTXT</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="associates.html">
+                <p>ASSOC</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="live.html">
+                <p>LIVE</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="audio.html">
+                <p>AUDIO</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="video.html">
+                <p>VIDEO</p>
+              </a>
+            </li>
+            <li>
+              <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="data.html">
+                <p>DATA</p>
+              </a>
+            </li>
+            <div class="social-wrap">
+              <div class="social">
+                <div class="social-item">
+                  <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href=""><img class="social-img" src="instagram.png" alt=""></a></div>
+                <a onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="">
+                  <div class="social-item">
+                </a>
+                <img class="social-img" src="facebook.png" alt=""></div>
+                <div class="social-item">
+                  <a href="https://soundcloud.com/crystalline-aether/"><img class="social-img" src="soundcloud.png" alt=""></a></div>
+                <div class="social-item">
+                  <a href="https://github.com/pointblankcompany"><img class="social-img" src="github.png" alt=""></a></div>
+              </div>
+            </div>
+          </ul>
+        </nav>
+        <div class="gold-b" style="top: 0;">
+          <div class="semi" style="overflow:hidden;top:0 !important;">
+            <h1 id="mp">POINTBLANK</h1>
+
+            <style>
+              #lb>h3 {
+                transform: translateY(0px);
+                box-shadow: 0 3px 20px #004466;
+                margin: 10px;
+                padding: 10px;
+                font-size: 2vh;
+                transition: box-shadow 0.2s, background-color 0.2s, transform 0.2s ease;
+              }
+
+              #lb>h3:hover {
+                box-shadow: 0 0 20px #004466;
+                transform: translateY(3px);
+                background-color: #001155;
+              }
+
+              @media screen and (max-width:100vh) {
+                #lb>h3 {
+                  height:5vh;line-height:5vh;
+                  width: auto;
+                  max-width: 50vw;
+                }
+                #bh {height: fit-content;
+                  top:30vh;
+
+                  width: 60vw;
+                  right: 0;
+                  left: 40vw;
+                  position: fixed;
+                }
+                #soon {
+                  display: none;
+                }
+
+              }
+            </style>
+
+
+            <center id="bh" style="display:flex;flex-flow:wrap;justify-content:center;padding:20px;">
+              <a id="lb" target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://soundcloud.com/crystalline-aether"><h3>SOUNDCLOUD</h3></a>
+              <a id="lb" target="_blank" onmouseout="hovoff('whirc')" onmouseover="hovon('whirc')" href="https://www.youtube.com/channel/UCpqtp8QwkEsbfjROIBh7ysg/live"><h3>YOUTUBE</h3></a></center>
+            <center>
+              <style>
+                h2 {}
+              </style>
+              <h2 id="soon">big things on the way</h2>
+            </center>
+
+=======
+            <style>
+              .cl>img {
+                width: 100%;
+                right: 0;
+                height: auto;
+              }
+              center{margin:0;width:100%;}
+              .cl {
+                position: absolute;
+                width: inherit;
+              }
+              #netcont{width:inherit;}
+            </style>
+            <div id="netcont">
+            <div class="cl">
+              <center><img src="network.png" style="opacity:0.5;max-width:800px;height:auto;position:relative;z-index:2;"></center>
+            </div>
+            <div class="cl">
+              <center><img src="network2.png" style="animation: hue 9s infinite;max-width:800px;height:auto;position:relative;"></center>
+            </div>
+            <div class="cl">
+              <center><img src="network3.png" style="animation: bright 5s infinite;max-width:800px;height:auto;position:relative;"></center>
+            </div>
+            </div>
+>>>>>>> parent of 27b19e3... s
+          </div>
+        </div>
+
+
+      </section>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/client.js"></script>
+
+  <script>
+    leScroll.addEvent('.arrowdown', 1);
+    leScroll.addEvent('#clickme', 0);
+    leScroll.addEvent('.next', 3);
+    leScroll.addEvent('.arrowup', 0);
+  </script>
+</body>
+
+</html>

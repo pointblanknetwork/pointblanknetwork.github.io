@@ -1,0 +1,195 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Pointblank Research delivers turnkey approaches to entropy reduction and asset accumulation. For All Humanity, Forever.">
+      <title>Pointblank Research</title>
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/reset.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+      <script src="network.js"></script>
+      <script src="audio.js"></script>
+
+      <style>
+        #mi>img {
+          width: 20vh;
+          position: absolute;
+          left: 0;
+          filter: brightness(0);
+        }
+
+        .s1 {
+          animation: rot1 25s ease infinite;
+          filter: blur(1px);
+          opacity: 1;
+          transform: scale(0.4);
+
+        }
+
+        .s2 {
+          animation: rot2 30s ease infinite;
+          filter: blur(2px);
+          opacity: 0.95;
+          transform: scale(0.2);
+
+        }
+
+        .s3 {
+          animation: rot3 15s ease infinite;
+          filter: blur(3px);
+          transform: scale(0.8);
+          opacity: 0.99;
+
+
+        }
+
+        @media screen and (max-width:100vh) {
+          #mi>img {
+            width: 20vw;
+          }
+        }
+      </style>
+    </head>
+
+    <body>
+      <!-- <audio id="dbth" preload="auto" loop src="snd/born.mp3"></audio>
+      <audio id="whirc" preload="auto" src="snd/click.mp3"></audio>
+      <audio id="whirb" preload="auto" src="snd/sh.mp3"></audio>
+      <audio id="whird" preload="auto" src="snd/page.mp3"></audio>
+      <audio id="whira" preload="auto" src="snd/menu.mp3"></audio> -->
+      <script>
+        function hovon(soundobj) {
+          var thissound = document.getElementById(soundobj);
+          thissound.play();
+        }
+
+        function hovoff(soundobj) {
+          var thissound = document.getElementById(soundobj);
+          thissound.pause();
+          thissound.currentTime = 0;
+        }
+
+        function hovpause(soundobj) {
+          var thissound = document.getElementById(soundobj);
+          thissound.pause();
+        }
+      </script>
+
+      <script>
+        function std() {
+          setTimeout(function() {
+
+          document.getElementByClassName("small-top").style.cssText = 'display:none;';
+        }, 100);
+
+        }
+      </script>
+      <script>
+        function stl() {
+          setTimeout(function() {
+
+          document.getElementByClassName("small-top").style.cssText = 'display:block;';
+        }, 5);
+
+        }
+      </script>
+      <script>
+        function res() {
+
+          document.getElementById("initbutton").style.cssText = 'z-index:-5;';
+
+        }
+      </script>
+      <script>
+        function del() {
+
+            document.getElementById("initbutton").style.cssText = 'z-index:10;';
+
+        }
+      </script>
+      <script>
+        function reset() {
+          setTimeout(function() {
+            $("#menu-b").click();
+          }, 200);
+        }
+      </script>
+      <div class="small-top" id="st">
+        <a target="site" onmousedown="reset(), hovon('whird')" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" class="backbutton" href="indexi.html">
+          <div class="arrowleft"></div>
+        </a>
+      </div>
+      <label for="navmenu" id="l-nav">
+        <label for="navmenu">
+          <span class="icon-menu">
+            <div class="small-top" id="menu-b" onmouseover="hovon('whira')" onmouseout="hovoff('whird'), hovoff('whira');" onmousedown="hovon('whird')">
+              <div class="arrowleft"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+                  <path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"></path>
+                </svg> </div>
+            </div>
+          </span>
+        </label>
+        <input type="checkbox" id="navmenu" name="navmenu">
+
+        <nav id="navres">
+          <ul>
+            <li><a onmousedown="reset(), stl(), res(), hovon('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="data.html">
+                <h1>READ</h1>
+              </a></li>
+            <li><a onmousedown="reset(), stl(), res(), hovpause('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="live.html">
+                <h1>VIEW</h1>
+              </a></li>
+            <li><a onmousedown="reset(), stl(), res(), hovon('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="apps.html">
+                <h1>APPS</h1>
+              </a></li>
+            <li><a onmousedown="reset(), stl(), res(), hovpause('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="hear.html">
+                <h1>HEAR</h1>
+              </a></li>
+            <li><a onmousedown="reset(), stl(), res(), hovon('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="proj.html">
+                <h1>TECH</h1>
+              </a></li>
+            <li><a onmousedown="reset(), std(), del(), hovon('dbth'), hovon('whird')" target="site" onmouseout="hovoff('whira')" onmouseover="hovon('whira')" href="indexi.html">
+                <h1>HOME</h1>
+              </a></li>
+          </ul>
+        </nav>
+        <div id="mask-cover"></div>
+        <div id="mask" >
+
+          <div id="container">
+            <div id="initbutton" style="" onmousedown="clickhome()"></div>
+            <section style="background-color:black;">
+              <iframe style="width:100vw;height:100vh;" src="indexi.html" name="site" id="site-frame" frameborder="0"></iframe>
+            </section>
+          </div>
+        </div>
+        <script src="network.js"></script>
+        <script src="click.js"></script>
+        <script src="line.js"></script>
+        <script src="onsound.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/client.js"></script>
+        <script>
+          leScroll.addEvent('.arrowdown', 1);
+          leScroll.addEvent('#clickme', 0);
+          leScroll.addEvent('.next', 3);
+          leScroll.addEvent('.arrowup', 0);
+        </script>
+
+        <script>
+          var sample = document.getElementById("dbth");
+          sample.play();
+        </script>
+
+    </body>
+
+    </html>
